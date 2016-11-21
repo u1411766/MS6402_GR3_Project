@@ -3,17 +3,19 @@ using System.Collections;
 
 public class HL_spawner : MonoBehaviour {
     public bool bl_can_spawn = true;
-    public  bool bl_inGame_spawn;
+    private HL_Level_Manager can_spawn;
+
     public float fl_Timer;
     public int int_timer_spawn;
+    public GameObject baloon;
 
     public bool test;
-    public GameObject baloon;
     //private HL_temp_colour_Conunter counter;
 	// Use this for initialization
 	void Start ()
     {
-        //counter = GameObject.Find("Main Camera").GetComponent<HL_temp_colour_Conunter>();
+        can_spawn = GameObject.Find("Main Camera").GetComponent<HL_Level_Manager>();
+
         Instantiate(baloon, gameObject.transform.position, gameObject.transform.rotation);
 	}
 	
@@ -27,7 +29,7 @@ public class HL_spawner : MonoBehaviour {
         }
         //else bl_can_spawn = true;
 
-	   if (bl_inGame_spawn == true)
+	   if (can_spawn.bl_inGame_spawn == true)
         {
             if (bl_can_spawn == true)
             {

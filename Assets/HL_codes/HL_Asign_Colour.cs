@@ -17,18 +17,9 @@ public class HL_Asign_Colour : MonoBehaviour
     public Material[] mat;
     public Renderer rend_display_colour;
 
-    // optional variabels for the lights on and off levels. can be diactivated on any normal level so it does not interfear with gameplay.
-    public bool bl_on_off_available;
-    public bool bl_lights;
+    // reference if light is on for the colours tochange on an object
 
-    // variable affecting swich time of light on off
-    private float fl_swich_timer;
-    public int int_swich_time;
-
-    // referenced light component
-
-    private Light light_sceen;
-    public GameObject GO_light;
+    private HL_Level_Manager light_option;
 
     // Use this for initialization
     void Start()
@@ -38,34 +29,14 @@ public class HL_Asign_Colour : MonoBehaviour
 
         // get the rendered to be modyfied from script
         rend_display_colour = GetComponent<Renderer>();
+        light_option = GameObject.Find("Main Camera").GetComponent<HL_Level_Manager>();
 
-        // get the componet light
-        //light_sceen = GameObject.Find("Directional Light").GetComponent<Light>();
-        light_sceen = GO_light.GetComponent<Light>();
     }
 
     // Update is called once per frame
     void Update()
     {
         set_colour();
-
-        // this is for the optional on off lights
-        if (bl_on_off_available == true)
-        {
-            fl_swich_timer += 1 * Time.deltaTime;
-
-        }
-        // truns lights on or off after a set seconds which is int_swich_time
-        if (fl_swich_timer > int_swich_time)
-        {
-            bl_lights = !bl_lights;
-            fl_swich_timer = 0;
-            light_sceen.enabled = !light_sceen.enabled;
-
-
-        }
-
-        //+++++++++++
 
     }
 
@@ -83,12 +54,12 @@ public class HL_Asign_Colour : MonoBehaviour
         // set object colour to a new material.
         if (int_colour_selected == 1)
         {
-            if (bl_lights == false)
+            if (light_option.bl_lights == false)
             {
                 rend_display_colour.material = mat[0];
                 bl_blue_balloon = true;
             }
-            if (bl_lights == true)
+            if (light_option.bl_lights == true)
             {
                 rend_display_colour.material = mat[1];
                 //bl_red_balloon = true;
@@ -96,12 +67,12 @@ public class HL_Asign_Colour : MonoBehaviour
         }
         if (int_colour_selected == 2)
         {
-            if (bl_lights == false)
+            if (light_option.bl_lights == false)
             {
                 rend_display_colour.material = mat[1];
                 bl_red_balloon = true;
             }
-            if (bl_lights == true)
+            if (light_option.bl_lights == true)
             {
                 rend_display_colour.material = mat[2];
                 //bl_yellow_balloon = true;
@@ -109,12 +80,12 @@ public class HL_Asign_Colour : MonoBehaviour
         }
         if (int_colour_selected == 3)
         {
-            if (bl_lights == false)
+            if (light_option.bl_lights == false)
             {
                 rend_display_colour.material = mat[2];
                 bl_yellow_balloon = true;
             }
-            if (bl_lights == true)
+            if (light_option.bl_lights == true)
             {
                 rend_display_colour.material = mat[3];
                 //bl_black_balloon = true;
@@ -122,12 +93,12 @@ public class HL_Asign_Colour : MonoBehaviour
         }
         if (int_colour_selected == 4)
         {
-            if (bl_lights == false)
+            if (light_option.bl_lights == false)
             {
                 rend_display_colour.material = mat[3];
                 bl_black_balloon = true;
             }
-            if (bl_lights == true)
+            if (light_option.bl_lights == true)
             {
                 rend_display_colour.material = mat[0];
                // bl_blue_balloon = true;
