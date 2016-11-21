@@ -17,14 +17,14 @@ public class HL_touch_destroy_test : MonoBehaviour
     private HL_Asign_Colour balloon;
     private HL_temp_colour_Conunter counter;
     // to cahnge when adding score
-    private HL_temp_score add;
+    private MS_Score_Test add;
 
     // Use this for initialization
     void Start()
     {
         counter = GetComponent<HL_temp_colour_Conunter>();
         // to cahnge when adding score
-        add = GetComponent<HL_temp_score>();
+        add = GameObject.Find("Panel").GetComponent<MS_Score_Test>();
     }
 
     // Update is called once per frame
@@ -53,25 +53,25 @@ public class HL_touch_destroy_test : MonoBehaviour
                         {
                             // Destroy(recipient);
                             // add score reference here ++++-------++++++
-                            add.score = add.score + 1;
+                            add.fl_score = add.fl_score + 1;
                         }
                         if (balloon.bl_red_balloon == true && counter.bl_kill_red == true)
                         {
                             // Destroy(recipient);
                             // add score reference here ++++-------++++++
-                            add.score = add.score + 1;
+                            add.fl_score = add.fl_score + 1;
                         }
                         if (balloon.bl_yellow_balloon == true && counter.bl_kill_yellow == true)
                         {
                             // Destroy(recipient);
                             // add score reference here ++++-------++++++
-                            add.score = add.score + 1;
+                            add.fl_score = add.fl_score + 1;
                         }
                         if (balloon.bl_black_balloon == true && counter.bl_kill_black == true)
                         {
                             // Destroy(recipient);
                             // add score reference here ++++-------++++++
-                            add.score = add.score + 1;
+                            add.fl_score = add.fl_score + 1;
                         }
 
                     }

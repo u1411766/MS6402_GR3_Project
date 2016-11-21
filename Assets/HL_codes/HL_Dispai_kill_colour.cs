@@ -5,12 +5,12 @@ public class HL_Dispai_kill_colour : MonoBehaviour
 {
     private HL_temp_colour_Conunter counter;
     public Material[] mat;
-    public Renderer rend_display_colour;
+    public SpriteRenderer rend_display_colour;
     // Use this for initialization
     void Start()
     {
         counter = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<HL_temp_colour_Conunter>();
-        rend_display_colour = GetComponent<Renderer>();
+        rend_display_colour = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
