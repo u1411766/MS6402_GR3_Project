@@ -42,10 +42,13 @@ public class HL_touch_destroy_test : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(rey, out hit, touchImputMask))
                 {
+
                     GameObject recipient = hit.transform.gameObject;
                     touchList.Add(recipient);
+                    Destroy(recipient);
                     if (Input.GetMouseButtonDown(0))
                     {
+                        
                         Destroy(recipient);
                         recipient.SendMessage("began", hit.point, SendMessageOptions.DontRequireReceiver);
                         balloon = recipient.GetComponent<HL_Asign_Colour>();

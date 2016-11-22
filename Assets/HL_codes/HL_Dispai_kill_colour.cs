@@ -5,9 +5,7 @@ using UnityEngine.UI;
 public class HL_Dispai_kill_colour : MonoBehaviour
 {
     private HL_temp_colour_Conunter counter;
-   // public Material[] mat;
-   // public SpriteRenderer rend_display_colour;
-    //public Sprite[] sprites;
+   
     public Sprite red;
     public Sprite blue;
     public Sprite yellow;
@@ -17,9 +15,9 @@ public class HL_Dispai_kill_colour : MonoBehaviour
     void Start()
     {
         counter = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<HL_temp_colour_Conunter>();
-       // rend_display_colour = GetComponent<SpriteRenderer>();
+       
         Ui_image = GetComponent<Image>();
-        //rend_display_colour = GetComponent<SpriteRenderer>();
+       
     }
 
     // Update is called once per frame
@@ -27,25 +25,25 @@ public class HL_Dispai_kill_colour : MonoBehaviour
     {
 
 
-        if (counter.int_curent_colour == 1)
+        if (counter.bl_kill_blue)
         {
             //rend_display_colour.sprite = test;
             Ui_image.overrideSprite = blue;
 
         }
-        if (counter.int_curent_colour == 2)
+        if (counter.bl_kill_red)
         {
 
             Ui_image.overrideSprite = red;
 
 
         }
-        if (counter.int_curent_colour == 3)
+        if (counter.bl_kill_yellow)
         {
             Ui_image.overrideSprite = yellow;
 
         }
-        if (counter.int_curent_colour == 4)
+        if (counter.bl_kill_black)
         {
 
             Ui_image.overrideSprite = black;

@@ -58,6 +58,7 @@ public class HL_Asign_Colour : MonoBehaviour
             {
                 rend_display_colour.material = mat[0];
                 bl_blue_balloon = true;
+                gameObject.tag = "balloon_blue";
             }
             if (light_option.bl_lights == true)
             {
@@ -71,6 +72,7 @@ public class HL_Asign_Colour : MonoBehaviour
             {
                 rend_display_colour.material = mat[1];
                 bl_red_balloon = true;
+                gameObject.tag = "balloon_red";
             }
             if (light_option.bl_lights == true)
             {
@@ -84,6 +86,7 @@ public class HL_Asign_Colour : MonoBehaviour
             {
                 rend_display_colour.material = mat[2];
                 bl_yellow_balloon = true;
+                gameObject.tag = "balloon_yellow";
             }
             if (light_option.bl_lights == true)
             {
@@ -97,6 +100,7 @@ public class HL_Asign_Colour : MonoBehaviour
             {
                 rend_display_colour.material = mat[3];
                 bl_black_balloon = true;
+                gameObject.tag = "balloon_black";
             }
             if (light_option.bl_lights == true)
             {
