@@ -11,6 +11,9 @@ public class HL_Dispai_kill_colour : MonoBehaviour
     public Sprite yellow;
     public Sprite black;
     public Image Ui_image;
+
+    public GameObject curent_balloon;
+    public GameObject next_balloon;
     // Use this for initialization
     void Start()
     {

@@ -134,21 +134,24 @@ public class HL_temp_colour_Conunter : MonoBehaviour
 
     void Add_to_random_selection()
     {
-         // adds the ballon on a list or a random selection
-            if (ballons_blue.Count > 0)
+        // adds the ballon on a list or a random selection
+        if (ballons_blue.Contains(GameObject.FindGameObjectWithTag("balloon_blue")))
+        {
+            if (blue_added == false)
             {
-                
-                if (blue_added == false)
-                {
-                    L_available_colours.Add("blue");
-                    blue_added = true;
-                }
 
+                L_available_colours.Add("blue");
+                blue_added = true;
             }
-            // removes from the list when tha coulour balone is no longer on screen
-            if (ballons_blue.Count == 0)
+            
+
+        }
+ 
+        // removes from the list when tha coulour balone is no longer on screen
+        if (ballons_blue.Count == 0)
             {
                 L_available_colours.Remove("blue");
+                blue_added = false;
             }
         if (ballons_red.Count > 0)
         {
@@ -164,6 +167,7 @@ public class HL_temp_colour_Conunter : MonoBehaviour
         if (ballons_red.Count == 0)
         {
             L_available_colours.Remove("red");
+            red_added = false;
         }
         if (ballons_yellow.Count > 0)
         {
@@ -179,6 +183,7 @@ public class HL_temp_colour_Conunter : MonoBehaviour
         if (ballons_yellow.Count == 0)
         {
             L_available_colours.Remove("yellow");
+            yellow_added = false;
         }
         if (ballons_black.Count > 0)
         {
@@ -194,6 +199,7 @@ public class HL_temp_colour_Conunter : MonoBehaviour
         if (ballons_black.Count == 0)
         {
             L_available_colours.Remove("black");
+            black_added = false;
         }
 
 
