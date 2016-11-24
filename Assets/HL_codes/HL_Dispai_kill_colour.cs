@@ -12,8 +12,7 @@ public class HL_Dispai_kill_colour : MonoBehaviour
     public Sprite black;
     public Image Ui_image;
 
-    public GameObject curent_balloon;
-    public GameObject next_balloon;
+
     // Use this for initialization
     void Start()
     {
@@ -26,31 +25,56 @@ public class HL_Dispai_kill_colour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-        if (counter.bl_kill_blue)
+        if ( gameObject.name == "Next_Balloon")
         {
-            //rend_display_colour.sprite = test;
-            Ui_image.overrideSprite = blue;
+            if (counter.int_next_colour == 2 || counter.str_next_colour == "red")
+            {
+                Ui_image.overrideSprite = red;
 
+            }
+             if (counter.int_next_colour == 1 || counter.str_next_colour == "blue")
+            {
+                Ui_image.overrideSprite = blue;
+            }
+
+            if (counter.int_next_colour == 3 || counter.str_next_colour == "yellow")
+            {
+                Ui_image.overrideSprite = yellow;
+            }
+            if (counter.int_next_colour == 4 || counter.str_next_colour == "black")
+            {
+                Ui_image.overrideSprite = black;
+            }
+
+            
         }
-        if (counter.bl_kill_red)
+
+        if (gameObject.name == "Current_Balloon")
         {
+            if (counter.bl_kill_blue)
+            {
+                
+                Ui_image.overrideSprite = blue;
 
-            Ui_image.overrideSprite = red;
+            }
+            if (counter.bl_kill_red)
+            {
+
+                Ui_image.overrideSprite = red;
 
 
-        }
-        if (counter.bl_kill_yellow)
-        {
-            Ui_image.overrideSprite = yellow;
+            }
+            if (counter.bl_kill_yellow)
+            {
+                Ui_image.overrideSprite = yellow;
 
-        }
-        if (counter.bl_kill_black)
-        {
+            }
+            if (counter.bl_kill_black)
+            {
 
-            Ui_image.overrideSprite = black;
+                Ui_image.overrideSprite = black;
 
+            }
         }
     }
 }
