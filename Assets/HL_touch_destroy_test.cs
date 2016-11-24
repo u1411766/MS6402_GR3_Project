@@ -56,27 +56,31 @@ public class HL_touch_destroy_test : MonoBehaviour
                         {
                             // Destroy(recipient);
                             // add score reference here ++++-------++++++
-                            add.fl_score = add.fl_score + 1;
+                            add.fl_score = add.fl_score + 10;
                         }
                         if (balloon.bl_red_balloon == true && counter.bl_kill_red == true)
                         {
                             // Destroy(recipient);
                             // add score reference here ++++-------++++++
-                            add.fl_score = add.fl_score + 1;
+                            add.fl_score = add.fl_score + 10;
                         }
                         if (balloon.bl_yellow_balloon == true && counter.bl_kill_yellow == true)
                         {
                             // Destroy(recipient);
                             // add score reference here ++++-------++++++
-                            add.fl_score = add.fl_score + 1;
+                            add.fl_score = add.fl_score + 10;
                         }
                         if (balloon.bl_black_balloon == true && counter.bl_kill_black == true)
                         {
                             // Destroy(recipient);
                             // add score reference here ++++-------++++++
-                            add.fl_score = add.fl_score + 1;
+                            add.fl_score = add.fl_score + 10;
                         }
+                        /*else
+                        {
+                            add.fl_score -= 10;
 
+                        }*/
                     }
                 }
             }

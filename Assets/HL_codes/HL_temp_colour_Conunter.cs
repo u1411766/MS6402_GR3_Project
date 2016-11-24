@@ -18,7 +18,7 @@ public class HL_temp_colour_Conunter : MonoBehaviour
     private bool black_added;
 
     // timer and colour counter variables
-    private float fl_timer;
+    public float fl_timer;
     public int int_change_timer;
     public int int_curent_colour;
     public int int_next_colour = 2;

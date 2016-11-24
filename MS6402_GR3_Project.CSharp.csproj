@@ -65,7 +65,9 @@
   <ItemGroup>
     <Compile Include="Assets\HL_codes\HL_Asign_Colour.cs" />
     <Compile Include="Assets\HL_codes\HL_Dispai_kill_colour.cs" />
+    <Compile Include="Assets\HL_codes\HL_Level_Manager.cs" />
     <Compile Include="Assets\HL_codes\HL_cam_orientation.cs" />
+    <Compile Include="Assets\HL_codes\HL_gameObject_list.cs" />
     <Compile Include="Assets\HL_codes\HL_spawner.cs" />
     <Compile Include="Assets\HL_codes\HL_temp_colour_Conunter.cs" />
     <Compile Include="Assets\HL_codes\HL_temp_score.cs" />
